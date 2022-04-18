@@ -1,0 +1,216 @@
+How to install Ubuntu in windows 10?
+First Step - Go to microsoft store.
+Second step - search ubuntu and install,
+third step - Go to control panel --> programs -->Turn on windows features on or off --> 
+		drag side bar go to bottom --> tick mark to windows subsystem for linux --> restart your system.
+
+fourth step - First open ubuntu and close it immediatey and gain open then it will work fine.
+
+
+
+if you have windows 7,8 then you can install Cygwin
+link : https://www.cygwin.com/install.html
+
+If you want to practice on mobile 
+termux 
+
+UNIX 
+
+Q.what is unix?
+Unix is open source operating system.
+It is widely used for networking purpose.
+This can be used by its copywriters or license holder.
+Flavours: IBM AIX,HP-Ux Sun Solaris etc.
+
+
+Q.what is linux?
+Linux is open operating system which is freely available to everyone.
+Flavores: Ubuntu,Rehat,fedora,termux etc
+
+Real time Unix - Putty Terminal
+
+Unix is case sensitive i.e A-a here A -meaning is diffrent a- meaning is diffrent
+
+Basic Commands
+1.date 
+It will display date and time.
+
+syntax: date
+O/P : Wed Mar 16 20:54:05 IST 2022
+
+2.cal 
+It will display current month calender
+
+synatx:cal
+ex : cal 2018
+     cal march 2021
+     cal 5 2020
+
+3.who
+Display current logged users in system 
+
+syntax : who
+O/P : praveen
+      Naveen
+
+4.who i am 
+It will display current user information.
+
+synatx: who i am
+O/P : praveen 2022-03-16 6:45
+
+5.whoami
+It will display only user name.
+
+synatx: whoami
+O/P : root
+
+6.hostname 
+It will display system name or hostname
+
+synatx: hostname
+
+if we want to know the system IP address then we can use 
+
+syntax : hostname -i
+
+7.tty
+It will display name of terminal.
+
+synatx: tty
+tty1 - print the file name of the terminal connected to standard input
+
+8.whatis 
+It will display command description.
+
+synatx: whatis cammands name
+ex: whatis tty
+
+9.man
+It will provide the complete Manual page realted to particular commnad with its syntax and options which is used in Linux.
+
+syntax : man Commnad_name
+ex : man tty ,man date etc.
+
+Q.Tell me any 5 basic commands your across with?
+Q.Which commnads your using in your project?
+Q.Tell me your daily activities commnads used in putty terminal?
+
+
+File Related Commands
+1.touch
+It is used to create empty or .txt file.
+
+syntax : touch file_name
+
+Q.How to create empty or simple .txt file in UNIX?
+
+2.cat
+This command is used for many purposes
+1.Create file/it will overwrite existing file (syntax : cat > filename) 
+2.display the content of file (syntax : cat  filename or cat < filename)
+3.To append(add) data at the end of file (syntax : cat >> filename)
+4.Concatenate more than one file (syntax : cat  filename1 filename2)
+5.Copying many files into one file (syntax : cat  filename1 filename2 > filename3)
+
+Q.What is the purpose of cat command?
+Q.How we can over write a file?
+Q.How to append data in a existing file without over writing?
+
+3.more 
+To show the content in a file.
+We can't move up once the file is displayed but we can see the bottom file content by pressing ENTER button from keyboard.
+It will disply, how much percentage of data has been displayed.
+
+synatx : more filename
+
+Two option
+1.more +5(you can use any number) filename -it will start displying the file content from line 5 or row 5.
+1.more -5 filename -it will start displying the file content from line 1 to line 5.
+
+4.less
+To show the content of file with 'END' keyword.
+It is providing flexibility to move up and down inside the file by using arrow keys from keyboard.
+
+syntax : less filename
+
+5.head 
+By default it will display top 10 records from file
+
+syntax: head filename
+
+we can display top2 line or top 2o lines by using below option
+
+head -2 filename
+head -29 filename
+
+6.tail
+By default it will display bottom 10 records from file 
+
+syntax : tail filename
+
+Q.How to display only 22nd record from file?
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

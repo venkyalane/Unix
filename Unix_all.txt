@@ -1,0 +1,481 @@
+How to install Ubuntu in windows 10?
+First Step - Go to microsoft store.
+Second step - search ubuntu and install,
+third step - Go to control panel --> programs -->Turn on windows features on or off --> 
+		drag side bar go to bottom --> tick mark to windows subsystem for linux --> restart your system.
+
+fourth step - First open ubuntu and close it immediatey and gain open then it will work fine.
+
+
+
+if you have windows 7,8 then you can install Cygwin
+link : https://www.cygwin.com/install.html
+
+If you want to practice on mobile 
+termux 
+
+UNIX 
+
+Q.what is unix?
+Unix is open source operating system.
+It is widely used for networking purpose.
+This can be used by its copywriters or license holder.
+Flavours: IBM AIX,HP-Ux Sun Solaris etc.
+
+
+Q.what is linux?
+Linux is open operating system which is freely available to everyone.
+Flavores: Ubuntu,Rehat,fedora,termux etc
+
+Real time Unix - Putty Terminal
+
+Unix is case sensitive i.e A-a here A -meaning is diffrent a- meaning is diffrent
+
+Basic Commands
+1.date 
+It will display date and time.
+
+syntax: date
+O/P : Wed Mar 16 20:54:05 IST 2022
+
+2.cal 
+It will display current month calender
+
+synatx:cal
+ex : cal 2018
+     cal march 2021
+     cal 5 2020
+
+3.who
+Display current logged users in system 
+
+syntax : who
+O/P : praveen
+      Naveen
+
+4.who i am 
+It will display current user information.
+
+synatx: who i am
+O/P : praveen 2022-03-16 6:45
+
+5.whoami
+It will display only user name.
+
+synatx: whoami
+O/P : root
+
+6.hostname 
+It will display system name or hostname
+
+synatx: hostname
+
+if we want to know the system IP address then we can use 
+
+syntax : hostname -i
+
+7.tty
+It will display name of terminal.
+
+synatx: tty
+tty1 - print the file name of the terminal connected to standard input
+
+8.whatis 
+It will display command description.
+
+synatx: whatis 
+ex: whatis tty
+
+9.man
+It will provide the complete Manual page realted to particular commnad with its syntax and options which is used in Linux.
+
+syntax : man Commnad_name
+ex : man tty ,man date etc.
+
+Q.Tell me any 5 basic commands your across with?
+Q.Which commnads your using in your project?
+Q.Tell me your daily activities commnads used in putty terminal?
+
+
+File Related Commands
+1.touch
+It is used to create empty or .txt file.
+
+syntax : touch file_name
+
+Q.How to create empty or simple .txt file in UNIX?
+
+2.cat
+This command is used for many purposes
+1.Create file/it will overwrite existing file (syntax : cat > filename) 
+2.display the content of file (syntax : cat  filename or cat < filename)
+3.To append(add) data at the end of file (syntax : cat >> filename)
+4.Concatenate more than one file (syntax : cat  filename1 filename2)
+5.Copying many files into one file (syntax : cat  filename1 filename2 > filename3)
+
+Q.What is the purpose of cat command?
+Q.How we can over write a file?
+Q.How to append data in a existing file without over writing?
+
+3.more 
+To show the content in a file.
+We can't move up once the file is displayed but we can see the bottom file content by pressing ENTER button from keyboard.
+It will disply, how much percentage of data has been displayed.
+
+synatx : more filename
+
+Two option
+1.more +5(you can use any number) filename -it will start displying the file content from line 5 or row 5.
+1.more -5 filename -it will start displying the file content from line 1 to line 5.
+
+4.less
+To show the content of file with 'END' keyword.
+It si providing flexibility to move up and down inside the file by using arrow keys from keyboard.
+
+syntax : less filename
+
+5.head 
+By default it will display top 10 records from file
+
+syntax: head filename
+
+we can display top2 line or top 2o lines by using below option
+
+head -2 filename
+head -29 filename
+
+6.tail
+By default it will display bottom 10 records from file 
+
+syntax : tail filename
+
+Q.How to display only 22nd record from file?
+If we want to join two commands thenm we have symbol called pipe (|) in linux .
+
+head -22 newfile | tail -1
+
+7.mv
+Rename a file or move file.
+
+syntax : mv f1 f2 - Moving data from f1 to f2
+	 mv d1 d2 - while using the concept of rename but the condition is file should exist into the directory
+Note: f1 data copy into f2 but f1 will be deleted permanently 
+
+8.cp
+It will overwrite or erase data from a file.
+
+synatx: cp f1 f2
+
+Note:It will overwrite data into f2 from f1 but f1 remain exist in directory.
+
+9.rm
+It is used to remove file from directory.
+We can delete more than one file at time by suing same syntax.
+
+synatx: rm f1, rm f1 f2 f3 
+
+Option : -i => This option display a pop up msg while deleting file and it is ask whether you want to delete or not.
+
+10.comm
+'comm' command comapres two files.
+By default it will always display three columns 
+
+1st col :- Indicates non-matching records from file1.
+2nd col :- Indicates non-matching records from file2.
+3rd col :- Indicates matching records from file1 and file2.
+
+both files have to be sorted order for 'comm' command to be executed.
+
+
+synatx: comm f1 f2 
+
+11.tac
+The tac command is the reverse of cat commnad.
+it display content of file in reverse order.
+
+synatx: tac filename
+
+12.tr 
+Tr command is used to translate the file content from lower case to upper case.
+
+syntax : cat filename | tr 'old' 'new'
+
+example : cat f1 | tr 'svtm' 'SVTM'
+
+
+FILTER RELATED COMMANDS
+1.grep(global regular expression print)
+It is used to search a particular pattern or regular expression.
+
+synatx: grep [option] filename
+
+optins :- -c - it will count how many times pattern is present inside file.
+	  -grep error test - this syntax will highlight only those lines which have that pattern i.e. error in this syntax.
+	  -n -it will display the line numbers where exactly the pattern is present.
+	  -v - it will display only those line which do not have pattern.
+	  -i - it will ignore upper case and lower case inside the pattern.
+	  -r - it will find a pattern into complete directory and disply respective files.
+
+2.sort
+It is used to display the file content in ascending or descending order
+
+synatx: sort filename (ASC)
+	sort -r filename (DESC)
+
+3.gzip
+The gzip command is used to truncate the file size.
+It is a compressing tool.It replaces the original size of file having .gz extension.
+
+synatx: gzip <file1> <file2>
+
+4.gunzip 
+The gunzip command is used to decompress a file.
+It is reverse operation of gzip commnad.
+
+syntax: gunzip <file1> <file2>
+
+
+DIRECTORY RELATED COMMANDS
+1.pwd(Present Working Directory)
+pwd command is used to display the location of the current directory
+
+syntax: pwd
+
+2.mkdir
+mkdir command is used to create a new directory.
+
+syntax: mkdir directory_name
+
+
+3.rmdir
+rmdir command is used to delete empty directory.
+
+syntax: rmdir directory_name
+
+
+Q.How to delete non-empty directory from terminal?
+if directory is not empty then we can delete non-empty directory by using rm command 
+
+synatx: rm -rf <direcory_name> or rm -r <direcory_name>
+
+4.cd(change directory)
+cd command is used to chnage the current directory.
+
+syntax: cd <directory_name> or cd <path>
+
+to go back one position : cd ..
+to go back two position : cd ../..
+to go back directly to home directory : cd ~
+to go particlar path then : cd <path>
+
+Q.How to reverse multiple directory back?
+or
+Q.how to go back multiple directory at once?
+Q.how to go back to home directory?
+Q.What is the diffrence between cd & cd ..
+
+5.ls 
+ls command is used to display a list of content from directory.
+
+syntax: ls [option]
+
+ls -l
+col1 = -rw-r--r-- 
+col2 = 1 
+col3&4 = root root
+col5 = 52 
+col6 = Mar 19 21:57
+col7 =  f1
+
+drwxr-xr-x 1 root root 512 Mar 19 21:57 scodeen
+
+columns above indicate specific things
+
+col1 : indicates information regarding file permission.
+col2 : indicates the number of links to the file or directory
+col3&4 : indicates owner and group information
+col5 :indicates size of the file or directory
+col6 : shows the date and time on which file or directory has been modified.
+col7 : shows the file or directory name 
+
+option:
+
+Process Related commnads
+1.ps(process status)
+ps will display active process or running process at the bacground.
+
+syntax: ps 
+
+2.kill
+this commnad is used to kill or terminate or stop the running process at the background by using it PID(Proceess ID).
+
+styntax : kill pid(no)
+
+TERMINAL RELATED COMMANDS
+1.clear
+It will the terminal screen completely
+
+syntax: clear
+
+2.man
+It will display manual pages with all the details of selected commands.
+
+syntax: man command_name
+
+
+
+PERMISSION RELATED COMMANDS
+1.chmod
+This commnad is used to set the permission for file or directory.
+
+Inside unix we have three groups to operate and thise are 
+1.user/owner
+2.group
+3.other
+
+There are two approaches we can use with chmod command to change the permission
+1.Symbolic methods
+2.CHMOD-777 table
+
+1.Symbolic methods
+access class		operator 		access type 
+user (u)		+ (add acccess)		r (read)
+group (g)		- (remove access)	w (write)
+other (o) 		= (set exact access)	x (execute)
+a (all u,g and o)
+-rw-r--r--
+
+- = directory 
+rw- = user 
+r-- = group 
+r-- = others
+
+syntax: chmod [option] filename 
+
+chmod u=x,g=w,o=w file 
+
+2.CHMOD-777 table
+Permission 		number 
+read (r)		4
+write(w)		2
+execute(x)		1
+
+g = 4+2+1 =7
+
+u 4
+g 5
+o 7
+
+
+Number	Octal Permission 						Representation	Ref
+0	No permission							---
+1	Execute permission						--x
+2	Write permission						-w-
+3	Execute and write permission: 1 (execute) + 2 (write) = 3	-wx
+4	Read permission							r--
+5	Read and execute permission: 4 (read) + 1 (execute) = 5		r-x
+6	Read and write permission: 4 (read) + 2 (write) = 6		rw-
+7	All permissions: 4 (read) + 2 (write) + 1 (execute) = 7		rwx
+
+
+2.chown
+It is used to chnage the owner permission
+
+syntax : chown [option] [OWNER][Group] filename
+
+
+Networking Related commnads
+1.telnet
+telenet command is used to create a remote connection with another system/server over TCP/IP network.
+
+syntax: telnet 
+	telnet> 127.0.1.13
+2.ftp
+file transfer protocol , we can send files but atleast you should have read permission on source file
+
+Some of the commands most commonly used 
+cd 
+ls
+mkdir 
+rmdir
+
+put - copy single from local m/c to remote m/c
+get - copy single from remote m/c to local m/c
+mput -copy multiple from local m/c to remote m/c
+mget - copy multiple from remote m/c to local m/c
+
+1.awk
+
+It is used to process rows and columns from file 
+
+syntax : to columns -- awk '{print $column_no}' file_name
+	 to rows    -- awk 'NR1 && NR3' file_name 	
+
+Q.How to print 22 at the end of every line in a file ?
+ awk '{print $0, 22}' f3
+Q.How to print 22 at the start of every line in a file ?
+ awk '{print 22 , $0}' f3
+Q.How to print 22 at the start and end of every line in a file ?
+ awk '{print 22 , $0, 22}' f3
+
+
+
+2.cut
+It is used to remove section from each line of files.
+It can be used to cut parts of a line by byte position(-b),charecter(-c) and field(-f).
+
+syntax : cut [option] filename
+
+Q.How will cut 3rd column from file?
+Q.How will you cut 3rd byte postion from file?
+Q.How will you cut 1st and 2nd word from file?
+cut -d ' ' -f1,2 ctest1 
+
+
+3.find
+find commnad is used to search and locate the list of files and directories
+
+syntax: find -name filename
+
+4.vi(Visual instrument) editor 
+it will operate in three modes 
+
+1.command mode 
+We perform multiple actions on file
+vi editor starts in command mode 
+inside vi editor whatever the words you type which will act as commnad
+
+2.Insert mode 
+if you want to enter in insert mode then we need to use ESC + i button from keyboard 
+
+3.escape mode 
+To switch between commnad mode to insert mode or insert mode to commnad mode we use escape mode.
+
+5.sed
+it is stream editor
+it is used to
+1.replace string from file
+2.delete or remove string in a file
+3.to display 
+
+syntax : sed '[option]' filename
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+	
